@@ -108,7 +108,7 @@ if($_SESSION['Login']!="Active")
               echo "The Row has been deleted from the transaction_information";?>
               <a href="AddTransaction.php" class="button">Back</a>
             <?php  die ("Error:".mysqli_error($conn1));
-
+             $result5 = mysqli_query($conn3,"SELECT * FROM transaction_information NATURAL JOIN TransactionID ");
               }
         $_SESSION['TD'] = "DeActive";
         ?>
